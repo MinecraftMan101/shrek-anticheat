@@ -133,6 +133,14 @@ public class AimPattern extends Checks {
                         this.Alert(player, Color.Gray + "Reason: " + Color.Red + "Difference");
                     }
                 }
+
+                if ((user2.test += (yawDifference >= 2.f && pitchDifference <= 0.009 ? 2 : yawDifference >= 5.f && pitchDifference <= 0.009 ? 4 : user2.test > 4 ? -5 : 0)) > 30) {
+                    this.Alert(player, Color.Gray + "Reason: " + Color.Red + "Test");
+                }
+
+                if (user2.test < 0) {
+                    user2.test = 0;
+                }
                 this.aimCVerbose.put(player.getUniqueId(), verbose2);
                 this.differenceVerbose.put(player.getUniqueId(), difVerbose);
                 user2.setLastPitchDifferenceAimC(pitchDifference);

@@ -19,6 +19,8 @@ import pw.skidrevenant.fiona.utils.CustomLocation;
 
 public class User
 {
+
+    public int test;
     private Player player;
     private UUID uuid;
     private Map<Checks, Integer> vl;
