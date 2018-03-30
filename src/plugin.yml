@@ -1,0 +1,10 @@
+name: Fiona
+version: 2.0~DEV-1
+main: pw.skidrevenant.fiona
+description: A shitty and skidded anticheat in many layers.
+author: [funkemunky, XTasyCode, SkidRevenant]
+commands:
+    Fiona:
+      aliases: [anticheat]
+    togglealerts:
+      aliases: [alerts]

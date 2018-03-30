@@ -1,0 +1,101 @@
+bungee: false
+Punish_Cmd: "ban %player% Unfair Advantage -s"
+debug: false
+testmode: false
+logs:
+  enabled: true
+  broadcast: true
+  #In minutes.
+  interval: 2
+#Recommended to prevent issues with pearls and Fiona.
+PearlFix:
+  #Prevents pearling directly onto glitchable blocks.
+  glitchFix: true
+  #Prevents players from getting stuck into blocks.
+  stuckFix: true
+checks:
+  Speed:
+    enabled: true
+    bannable: true
+    cancelled: false
+    #Disable or enable the different parts of the check.
+    Limit: true
+    Constant: true
+    #Limited, Vanilla, onGround, midAir.
+    Others: true
+    maxViolations: 20
+    tpsCancel: 16.5
+  AimPattern:
+    enabled: true
+    bannable: false
+    cancelled: false
+    #Disable different parts of AimPattern.
+    Meme: true
+    Difference: true
+    ImpossiblePitch: true
+    #The max amount of violations before the punishment command is called.
+    maxViolations: 10
+    tpsCancel: 18.0
+  Phase:
+    enabled: true
+    bannable: false
+    cancelled: false
+    #Disable/enable alerts for phase.
+    silent: false
+    maxViolations: 200
+    tpsCancel: 0
+  Fly:
+    enabled: true
+    bannable: true
+    cancelled: false
+    #Toggle different parts of Fly.
+    JumpHeight: true
+    Invalid: true
+    FallSpeed: true
+    Speed: true
+    #More leniency for velocity
+    velocityLeniency: true
+    maxViolations: 18
+    #The TPS threshold before the check is temporarily turned off.
+    tpsCancel: 14.0
+  KillAura:
+    enabled: true
+    bannable: true
+    cancelled: false
+    #Toggle different parts of Killaura.
+    InvalidSwing: true
+    Direction: true
+    Heuristic: true
+    Switch: true
+    Angle: true
+    RayTrace: true
+    maxViolations: 14
+    tpsCancel: 15.6
+  Reach:
+    enabled: true
+    bannable: true
+    cancelled: false
+    #Toggle different parts of reach.
+    Counted: true
+    UseEntity: true
+    maxViolations: 5
+    tpsCancel: 17.0
+  Timer:
+    enabled: true
+    bannable: true
+    cancelled: false
+    #Toggle different parts of Timer.
+    TypeA: true
+    TypeB: true
+    TypeC: true
+    maxViolations: 8
+    tpsCancel: 17.0
+  AutoClicker:
+    enabled: true
+    bannable: false
+    #Change the threshold for CPS.
+    thresholdToAlert: 20
+    thresholdToAddVL: 30
+    maxViolations: 100
+    tpsCancel: 17.0
+    cancelled: false
