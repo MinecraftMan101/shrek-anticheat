@@ -54,11 +54,13 @@ public class Criticals extends Checks
             if (PlayerUtils.hasBlocksNear(l)) {
                 return;
             }
-            if (player.getFallDistance() > 0.0 && user.getRealFallDistance() == 0.0) {
-                ++verbose;
-            }
-            else {
+
+            double fallDistance = player.getFallDistance();
+
+            if ((fallDistance <= 0.f || user.getRealFallDistance() != 0.f) && (fallDistance <= 0.8 || fallDistance >= 0.8)) {
                 verbose = ((verbose > 0) ? (verbose - 1) : 0);
+            } else {
+                ++verbose;
             }
             if (verbose > 2) {
                 user.setVL(this, user.getVL(this) + 1);
